@@ -1,6 +1,6 @@
 import {asyncError}  from "../middlewares/errorMiddleware.js";
 import { Order } from "../models/Order.js";
-import ErrorHandler from "../utils/ErrorHandler.js";
+import ErrorHandler from "../utils/errorHandler.js";
 
 
 export const placeOrder = asyncError(async (req, res, next) => {
