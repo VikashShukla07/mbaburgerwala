@@ -10,9 +10,10 @@ router.get("/googlelogin",passport.authenticate("google",{
 
 router.get(
   "/login",
-  passport.authenticate("google", {
-    successRedirect: process.env.FRONTEND_URL,
-  })
+  passport.authenticate("google"),
+  (req,res,next)=>{
+    res.send("LOGGED IN")
+  }
 );
 router.get("/me",isAuthenticated,myProfile)
 
