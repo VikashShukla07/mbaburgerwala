@@ -52,8 +52,8 @@ connectPassport();
 import orderRoute from "./routes/order.js";
 
 
-app.use("/mbaburgerwala-pax9.vercel.app/api/v1", userRoute);
-app.use("/mbaburgerwala-pax9.vercel.app/api/v1", orderRoute);
+app.use("/api/v1", userRoute);
+app.use("/api/v1", orderRoute);
 
 app.use(errorMiddleware);
 
