@@ -15,11 +15,11 @@ router.get(
     res.send("LOGGED IN")
   }
 );
-router.get("/me",isAuthenticated,myProfile)
+router.get("/api/v1/me",isAuthenticated,myProfile)
 
-router.get("/logout", logout)
-router.get("/admin/users", isAuthenticated,authorizeAdmin,getAdminUsers);
-router.get("/admin/stats", isAuthenticated,authorizeAdmin,getAdminStats);
+router.get("/api/v1/logout", logout)
+router.get("/api/v1/admin/users", isAuthenticated,authorizeAdmin,getAdminUsers);
+router.get("/api/v1/admin/stats", isAuthenticated,authorizeAdmin,getAdminStats);
 export default router;
 
 
