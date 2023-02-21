@@ -10,10 +10,9 @@ router.get("/googlelogin",passport.authenticate("google",{
 
 router.get(
   "/mbaburgerwala-pax9.vercel.app/api/v1/login",
-  passport.authenticate("google"),
-  (req,res,next)=>{
-    res.send("LOGGED IN")
-  }
+  passport.authenticate("google", {
+    successRedirect: process.env.FRONTEND_URL,
+  })
 );
 router.get("/me",isAuthenticated,myProfile)
 
