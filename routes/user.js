@@ -4,7 +4,7 @@ const router=express.Router();
 import {myProfile,logout, getAdminUsers, getAdminStats} from "../controllers/user.js"
 import { authorizeAdmin, isAuthenticated } from '../middlewares/Auth.js';
 
-router.get("/googlelogin",passport.authenticate("google",{
+router.get("api/v1/googlelogin",passport.authenticate("google",{
     scope:["profile"],
 }));
 
